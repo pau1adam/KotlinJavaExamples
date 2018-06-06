@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".kotlin.RecipeActivity"></activity>
+        <activity android:name=".kotlin.RecipeActivity" />
+        <activity android:name=".java.MainActivity" />
+        <activity android:name=".java.RecipeActivity"></activity>
     </application>
 
 </manifest>
