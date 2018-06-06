@@ -1,13 +1,11 @@
-package io.github.pau1adam.kotlinjavasamples
+package io.github.pau1adam.kotlinjavasamples.kotlin
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import com.jakewharton.retrofit2.adapter.kotlin.coroutines.experimental.CoroutineCallAdapterFactory
+import io.github.pau1adam.kotlinjavasamples.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.experimental.runBlocking
-import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +19,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun search(keyword: String): List<Recipe> = runBlocking {
         try { api.search(API_KEY, keyword, 1).await() }
-        catch (e: Exception) { GetSearchRecipeResponse() }.recipes
+        catch (e: Exception) {
+            GetSearchRecipeResponse()
+        }.recipes
     }
 
 }

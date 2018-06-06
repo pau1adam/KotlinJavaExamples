@@ -1,9 +1,10 @@
-package io.github.pau1adam.kotlinjavasamples
+package io.github.pau1adam.kotlinjavasamples.kotlin
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import com.squareup.picasso.Picasso
+import io.github.pau1adam.kotlinjavasamples.R
 import kotlinx.android.synthetic.main.activity_recipe.*
 import kotlinx.coroutines.experimental.runBlocking
 
@@ -27,6 +28,8 @@ class RecipeActivity : AppCompatActivity() {
 
     private fun getRecipe(recipeId: String): Recipe = runBlocking {
         try { api.getRecipe(API_KEY, recipeId).await() }
-        catch (e: Exception) { GetRecipeResponse() }.recipe
+        catch (e: Exception) {
+            GetRecipeResponse()
+        }.recipe
     }
 }

@@ -1,4 +1,4 @@
-package io.github.pau1adam.kotlinjavasamples
+package io.github.pau1adam.kotlinjavasamples.kotlin
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.experimental.CoroutineCallAdapterFactory
 import retrofit2.Retrofit

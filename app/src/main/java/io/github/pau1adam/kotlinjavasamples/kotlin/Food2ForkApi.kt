@@ -1,4 +1,4 @@
-package io.github.pau1adam.kotlinjavasamples
+package io.github.pau1adam.kotlinjavasamples.kotlin
 
 import kotlinx.coroutines.experimental.Deferred
 import retrofit2.http.GET

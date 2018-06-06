@@ -1,4 +1,4 @@
-package io.github.pau1adam.kotlinjavasamples
+package io.github.pau1adam.kotlinjavasamples.kotlin
 
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.squareup.picasso.Picasso
+import io.github.pau1adam.kotlinjavasamples.R
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class RecipeListAdapter(private val recipes: List<Recipe>) :
