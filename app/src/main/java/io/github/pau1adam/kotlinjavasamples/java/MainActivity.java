@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<GetSearchRecipeResponse> call, Throwable t) {
-                //ignore
+                //assume network connectivity & ignore other types of errors
             }
         });
     }
