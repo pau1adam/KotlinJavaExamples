@@ -43,9 +43,11 @@ public class RecipeActivity extends AppCompatActivity {
         textView = findViewById(R.id.textview);
         listView = findViewById(R.id.ingerdients_listview);
 
+        final String recipeId = getIntent().getStringExtra("recipeid");
+
         api = retrofit.create(Food2ForkApi.class);
 
-        Call<GetRecipeResponse> searchRecipeCall = api.getRecipe(API_KEY, "potato");
+        Call<GetRecipeResponse> searchRecipeCall = api.getRecipe(API_KEY, recipeId);
         searchRecipeCall.enqueue(responseCallback);
 
     }
