@@ -24,17 +24,6 @@ public class RecipeActivity extends AppCompatActivity {
     private TextView textView;
     private ListView listView;
 
-    private final String BASE_URL = "http://food2fork.com/api/";
-
-    private final String API_KEY = "add api key";
-
-    Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(MoshiConverterFactory.create())
-            .build();
-
-    Food2ForkApi api;
-
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,9 +34,7 @@ public class RecipeActivity extends AppCompatActivity {
 
         final String recipeId = getIntent().getStringExtra("recipeid");
 
-        api = retrofit.create(Food2ForkApi.class);
-
-        Call<GetRecipeResponse> searchRecipeCall = api.getRecipe(API_KEY, recipeId);
+        Call<GetRecipeResponse> searchRecipeCall = RetrofitAPI.api.getRecipe(RetrofitAPI.API_KEY, recipeId);
         searchRecipeCall.enqueue(responseCallback);
 
     }
