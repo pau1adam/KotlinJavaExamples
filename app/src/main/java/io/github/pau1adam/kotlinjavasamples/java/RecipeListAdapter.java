@@ -15,7 +15,7 @@ import java.util.List;
 
 import io.github.pau1adam.kotlinjavasamples.R;
 import io.github.pau1adam.kotlinjavasamples.kotlin.Recipe;
-import io.github.pau1adam.kotlinjavasamples.kotlin.RecipeActivity;
+import io.github.pau1adam.kotlinjavasamples.java.RecipeActivity;
 
 public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.ViewHolder> {
 
